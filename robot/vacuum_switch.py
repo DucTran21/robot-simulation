@@ -1,6 +1,6 @@
 class VacuumSwitch:
     def activate(self):
-        print("Vacuum switch activated.")
-        
+        print("Vacuum activated.")
+
     def deactivate(self):
-        print("Vacuum switch deactivated.")
+        print("Vacuum deactivated.")

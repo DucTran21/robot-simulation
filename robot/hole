@@ -1,9 +1,0 @@
-class Hole:
-    def __init__(self):
-        self.item = None
-
-    def fill(self, item):
-        self.item = item
-
-    def is_filled(self):
-        return self.item is not None
