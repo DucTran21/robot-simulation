@@ -22,6 +22,10 @@ This project simulates a robot model designed for material filling in an assembl
     - vacuum_switch.py: Placeholder for vacuum functionality.
 - requirements.txt: List of required packages.
 
+## Extensions and Changes
+
+- The UML diagram has been adjusted to better reflect the relationships and interactions among classes.
+
 ## Running the Simulation
 
 To run the simulation, execute the following command:
