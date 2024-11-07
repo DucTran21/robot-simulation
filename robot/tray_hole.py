@@ -3,8 +3,9 @@ class Hole:
         self.filled = False
         self.item_color = None
 
-    def fill(self):
-        self.filled = True
-
     def is_filled(self):
         return self.filled
+
+    def fill(self):
+        self.filled = True
+        self.item_color = "gold-yellow"

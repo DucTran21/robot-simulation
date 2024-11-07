@@ -1,4 +1,4 @@
-from robot.robot_controller import Robot
+from robot.robot import Robot
 
 def main():
     robot = Robot()

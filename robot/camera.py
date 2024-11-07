@@ -3,11 +3,11 @@ import random
 
 class Camera:
     def scan(self, tray):
-        # Simulate item detection; randomly return items from tray
-        items = tray.get_items()
-        if items:
-            # Detect up to 4 items and their positions
-            detected_items = [(hole, hole.item_color) for hole in items]
-            detected_items = random.sample(detected_items, min(len(detected_items), 4))
-            return detected_items  # Return tuples of (hole, item_color)
+        # Get all filled holes from the tray along with their positions
+        items_with_positions = [(index, hole) for index, hole in enumerate(tray.holes) if hole.is_filled()]
+
+        if items_with_positions:
+            # Detect up to 6 items; ensure these are Hole objects with positions
+            detected_items = random.sample(items_with_positions, min(len(items_with_positions), 6))
+            return detected_items  # Return list of (position, Hole object) tuples
         return []

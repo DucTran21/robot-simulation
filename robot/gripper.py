@@ -3,7 +3,7 @@ class Gripper:
         self.item = None
 
     def pick(self, hole):
-        if hole and not hole.is_filled():
+        if hole and hole.is_filled():  # Only pick filled holes
             self.item = hole
             print(f"Picked {hole.item_color} item.")
 
