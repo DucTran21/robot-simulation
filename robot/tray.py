@@ -1,6 +1,6 @@
-from .tray_hole import Hole
+import time  # Import the time module for adding delays
 import random
-
+from robot.tray_hole import Hole
 class Tray:
     def __init__(self, size, filled=True):
         self.holes = [Hole() for _ in range(size)]
@@ -16,8 +16,11 @@ class Tray:
                 self.holes[item_index].item_color = "gold-yellow"
 
     def shake(self):
-        # Randomly rearrange items in the tray to simulate shaking
+        # Simulate the time taken to shake the tray
+        print("Shaking tray...")
+        time.sleep(2)  # Add a delay to represent the shaking action
         random.shuffle(self.holes)
+        print("Shaking complete.")
 
     def is_full(self):
         return all(hole.is_filled() for hole in self.holes)

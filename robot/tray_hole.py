@@ -9,3 +9,7 @@ class Hole:
     def fill(self):
         self.filled = True
         self.item_color = "gold-yellow"
+
+    def empty(self):
+        self.filled = False
+        self.item_color = None
